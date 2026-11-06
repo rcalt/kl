@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" data-page="shop">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop all teas | Kettle &amp; Leaf</title>
+  <meta name="description" content="Four teas, loose and bagged.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/pages/shop.css">
+  <script src="js/config.js"></script>
+  <script src="js/boot.js"></script>
+  <!-- GTM head snippet: lives in js/partials.js (one place for every page). -->
+  <script src="js/partials.js"></script>
+</head>
+<body>
+  <!-- GTM body snippet (noscript iframe): inserted here by js/partials.js. -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Header: injected by js/partials.js -->
+  <kl-header></kl-header>
+  <main id="main">
+    <div class="container">
+      <div class="page-title"><h1>Shop all teas</h1><p>Four teas, loose and bagged. Free standard shipping on orders of $40 or more.</p></div>
+      <div class="shop-toolbar">
+        <div class="chips" role="group" aria-label="Filter by category">
+          <button type="button" class="chip" id="chip-all" data-category="All" data-track="chip-all" aria-pressed="true">All</button>
+          <button type="button" class="chip" id="chip-black" data-category="Black Tea" data-track="chip-black" aria-pressed="false">Black Tea</button>
+          <button type="button" class="chip" id="chip-green" data-category="Green Tea" data-track="chip-green" aria-pressed="false">Green Tea</button>
+          <button type="button" class="chip" id="chip-chai" data-category="Chai" data-track="chip-chai" aria-pressed="false">Chai</button>
+        </div>
+        <div>
+          <span class="muted" id="shop-count"></span>
+          <label class="visually-hidden" for="shop-sort">Sort teas</label>
+          <select id="shop-sort" data-track="shop-sort">
+            <option value="featured">Featured</option><option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option><option value="rating">Top rated</option><option value="name">Name A to Z</option>
+          </select>
+        </div>
+      </div>
+      <div class="grid grid--4" id="shop-grid" style="padding-bottom:3rem"></div>
+    </div>
+  </main>
+  <!-- Footer: injected by js/partials.js -->
+  <kl-footer></kl-footer>
+  <!-- Cart drawer: injected by js/partials.js -->
+  <kl-cart-drawer></kl-cart-drawer>
+
+  <!-- Common scripts: identical block on every page -->
+  <script src="data/products.js" defer></script>
+  <script src="data/seed-users.js" defer></script>
+  <script src="data/seed-orders.js" defer></script>
+  <script src="data/seed-refunds.js" defer></script>
+  <script src="data/seed-reviews.js" defer></script>
+  <script src="js/util.js" defer></script>
+  <script src="js/db.js" defer></script>
+  <script src="js/services.js" defer></script>
+  <script src="js/datalayer.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/consent-mock.js" defer></script>
+  <script src="js/demo-panel.js" defer></script>
+  <!-- Page script -->
+  <script src="js/pages/shop.js" defer></script>
+</body>
+</html>

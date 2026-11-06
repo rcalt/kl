@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" data-page="track-order">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Track your order | Kettle &amp; Leaf</title>
+  <meta name="description" content="Track an order with your order number and email.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/pages/account.css">
+  <script src="js/config.js"></script>
+  <script src="js/boot.js"></script>
+  <!-- GTM head snippet: lives in js/partials.js (one place for every page). -->
+  <script src="js/partials.js"></script>
+</head>
+<body>
+  <!-- GTM body snippet (noscript iframe): inserted here by js/partials.js. -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Header: injected by js/partials.js -->
+  <kl-header></kl-header>
+  <main id="main">
+    <div class="container" style="padding-bottom:3rem">
+      <div class="page-title"><h1>Track your order</h1><p>Enter your order number and the email you used at checkout.</p></div>
+      <form class="card" id="track-form" novalidate style="max-width:520px;margin-bottom:1.5rem">
+        <div class="field"><label for="track-id">Order number</label><input type="text" id="track-id" placeholder="KL-20261103-4821"></div>
+        <div class="field"><label for="track-email">Email</label><input type="email" id="track-email"></div>
+        <button type="submit" class="btn btn--primary" id="track-submit" data-track="track-submit">Track order</button>
+      </form>
+      <div id="track-result"></div>
+    </div>
+  </main>
+  <!-- Footer: injected by js/partials.js -->
+  <kl-footer></kl-footer>
+  <!-- Cart drawer: injected by js/partials.js -->
+  <kl-cart-drawer></kl-cart-drawer>
+
+  <!-- Common scripts: identical block on every page -->
+  <script src="data/products.js" defer></script>
+  <script src="data/seed-users.js" defer></script>
+  <script src="data/seed-orders.js" defer></script>
+  <script src="data/seed-refunds.js" defer></script>
+  <script src="data/seed-reviews.js" defer></script>
+  <script src="js/util.js" defer></script>
+  <script src="js/db.js" defer></script>
+  <script src="js/services.js" defer></script>
+  <script src="js/datalayer.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/consent-mock.js" defer></script>
+  <script src="js/demo-panel.js" defer></script>
+  <!-- Page script -->
+  <script src="js/pages/track-order.js" defer></script>
+</body>
+</html>

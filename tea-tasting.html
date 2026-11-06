@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" data-page="tasting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tea tasting | Kettle &amp; Leaf</title>
+  <meta name="description" content="Book a guided tea tasting.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/pages/content.css">
+  <script src="js/config.js"></script>
+  <script src="js/boot.js"></script>
+  <!-- GTM head snippet: lives in js/partials.js (one place for every page). -->
+  <script src="js/partials.js"></script>
+</head>
+<body>
+  <!-- GTM body snippet (noscript iframe): inserted here by js/partials.js. -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Header: injected by js/partials.js -->
+  <kl-header></kl-header>
+  <main id="main">
+    <div class="container" style="padding-bottom:3rem">
+      <div class="page-title"><h1>Tea tasting sessions</h1><p>Sit down with us for 45 minutes and taste your way through all four teas, side by side. We will show you how to brew each one and how to tell what you like.</p></div>
+      <div class="alert alert--success" id="tasting-confirmation" role="status" hidden></div>
+      <!-- The booking form lives on a third origin (booking-widget/) and talks to this page with postMessage. -->
+      <iframe class="widget-frame" id="booking-frame" title="Book a tasting" loading="lazy"></iframe>
+    </div>
+  </main>
+  <!-- Footer: injected by js/partials.js -->
+  <kl-footer></kl-footer>
+  <!-- Cart drawer: injected by js/partials.js -->
+  <kl-cart-drawer></kl-cart-drawer>
+
+  <!-- Common scripts: identical block on every page -->
+  <script src="data/products.js" defer></script>
+  <script src="data/seed-users.js" defer></script>
+  <script src="data/seed-orders.js" defer></script>
+  <script src="data/seed-refunds.js" defer></script>
+  <script src="data/seed-reviews.js" defer></script>
+  <script src="js/util.js" defer></script>
+  <script src="js/db.js" defer></script>
+  <script src="js/services.js" defer></script>
+  <script src="js/datalayer.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/consent-mock.js" defer></script>
+  <script src="js/demo-panel.js" defer></script>
+  <!-- Page script -->
+  <script src="js/pages/tasting.js" defer></script>
+</body>
+</html>

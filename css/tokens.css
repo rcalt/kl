@@ -1,0 +1,24 @@
+/* Design tokens: brand colours, fonts, spacing. Edit here, it changes everywhere. */
+:root {
+  --green-900: #163323;
+  --green-700: #24503A;
+  --green-100: #E4EDE6;
+  --gold-500: #C49A2C;
+  --gold-700: #8A6A12;   /* darker gold, for gold text that must be readable */
+  --gold-200: #EFDDA8;
+  --cream: #F8F4EA;
+  --ink: #1C1C1A;
+  --danger: #A23B2A;
+  --white: #ffffff;
+  --muted: #5B6358;
+  --line: #E3DCC8;
+
+  --font-head: 'Young Serif', Georgia, serif;
+  --font-body: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+
+  --radius: 6px;
+  --shadow: 0 8px 22px rgba(22, 51, 35, .10);
+  --max: 1120px;
+  --header-h: 72px;
+}

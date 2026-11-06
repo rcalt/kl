@@ -1,0 +1,9 @@
+.cart-layout { display: grid; grid-template-columns: 1.6fr 1fr; gap: 2rem; align-items: start; padding-bottom: 3rem; }
+.cart-layout .cart-line { grid-template-columns: 80px 1fr auto auto; }
+.cart-layout .cart-line img { width: 80px; height: 80px; }
+.summary { background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 1.25rem; position: sticky; top: calc(var(--header-h) + 1rem); }
+.summary__row { display: flex; justify-content: space-between; padding: .3rem 0; }
+.summary__row--total { border-top: 1px solid var(--line); margin-top: .5rem; padding-top: .8rem; font-weight: 700; font-size: 1.15rem; }
+.coupon { display: flex; gap: .5rem; margin: 1rem 0; }
+.coupon input { text-transform: uppercase; }
+@media (max-width: 820px) { .cart-layout { grid-template-columns: 1fr; } .cart-layout .cart-line { grid-template-columns: 64px 1fr auto; } .cart-layout .cart-line .stepper { grid-column: 2; } }

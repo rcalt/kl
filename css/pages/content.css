@@ -1,0 +1,12 @@
+/* Brewing guide, tasting, gifting, legal */
+.article { max-width: 72ch; margin: 0 auto; padding: 1rem 0 3rem; }
+.article h2 { margin-top: 2.2rem; }
+.article ul { padding-left: 1.2rem; }
+.video-embed { position: relative; aspect-ratio: 16/9; margin: 1.5rem 0; background: #000; border-radius: 10px; overflow: hidden; }
+.video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.helpful { background: var(--green-100); border-radius: 10px; padding: 1.2rem; margin-top: 2rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+.popup { position: fixed; right: 1.2rem; bottom: 1.2rem; width: min(340px, calc(100% - 2.4rem)); background: var(--white); border: 1px solid var(--gold-500); border-radius: 10px; padding: 1.2rem; box-shadow: var(--shadow); z-index: 120; }
+.popup__close { position: absolute; top: .4rem; right: .6rem; background: none; border: 0; font-size: 1.4rem; cursor: pointer; }
+.widget-frame { width: 100%; height: 520px; border: 1px solid var(--line); border-radius: 10px; background: var(--white); }
+.form-card { max-width: 620px; background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 1.5rem; margin-bottom: 3rem; }
+.text-link-toggle { font-size: .9rem; }

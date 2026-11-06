@@ -1,0 +1,15 @@
+.hero { background: var(--green-900); color: var(--cream); padding: 4rem 0; overflow: hidden; }
+.hero__inner { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2.5rem; align-items: center; }
+.hero h1 { color: var(--cream); }
+.hero p { font-size: 1.15rem; color: #d3ded5; max-width: 46ch; }
+.hero__cta { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: 1.5rem; }
+.hero .btn--ghost { color: var(--cream); border-color: var(--gold-500); }
+.hero .btn--ghost:hover { background: rgba(255,255,255,.08); color: var(--cream); }
+.hero__img { border-radius: 14px; box-shadow: 0 20px 40px rgba(0,0,0,.3); }
+.steps { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); counter-reset: s; }
+.steps__item { position: relative; padding-top: 3rem; }
+.steps__item::before { counter-increment: s; content: counter(s); position: absolute; top: 0; left: 0; width: 2.2rem; height: 2.2rem; border-radius: 50%; background: var(--gold-500); color: var(--green-900); font: 700 1rem/2.2rem var(--font-body); text-align: center; }
+.offer-banner { background: var(--gold-200); border-top: 1px solid var(--gold-500); border-bottom: 1px solid var(--gold-500); padding: 2.2rem 0; text-align: center; }
+.offer-banner strong { font-family: var(--font-head); font-size: 1.5rem; font-weight: 400; color: var(--green-900); }
+.offer-banner code { background: var(--green-900); color: var(--gold-200); padding: .15rem .5rem; border-radius: 4px; }
+@media (max-width: 760px) { .hero__inner { grid-template-columns: 1fr; } .hero { padding: 2.5rem 0; } }

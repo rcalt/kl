@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" data-page="login">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in | Kettle &amp; Leaf</title>
+  <meta name="description" content="Log in or create a demo account.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/pages/account.css">
+  <script src="js/config.js"></script>
+  <script src="js/boot.js"></script>
+  <!-- GTM head snippet: lives in js/partials.js (one place for every page). -->
+  <script src="js/partials.js"></script>
+</head>
+<body>
+  <!-- GTM body snippet (noscript iframe): inserted here by js/partials.js. -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Header: injected by js/partials.js -->
+  <kl-header></kl-header>
+  <main id="main">
+    <div class="container">
+      <div class="page-title"><h1>Log in or sign up</h1><p id="login-note">Demo accounts only. No real authentication exists on this site: never use a real password.</p></div>
+      <div class="auth-grid">
+        <section class="card">
+          <h2>Log in</h2>
+          <div id="login-error"></div>
+          <form id="login-form" novalidate>
+            <div class="field"><label for="login-email">Email</label><input type="email" id="login-email" autocomplete="email"></div>
+            <div class="field"><label for="login-password">Password</label><input type="password" id="login-password" autocomplete="current-password"></div>
+            <button type="submit" class="btn btn--primary" id="login-submit" data-track="login-submit">Log in</button>
+          </form>
+          <details class="demo-accounts" id="demo-accounts">
+            <summary>Demo accounts</summary>
+            <p class="muted">Password for all three is <code>tea123</code>. Click a row to fill the form.</p>
+            <div class="table-wrap"><table class="table"><tbody>
+              <tr><td>Priya (subscriber)</td><td><button type="button" class="link-button" data-demo-email="priya@example.com" id="demo-priya" data-track="demo-priya">priya@example.com</button></td></tr>
+              <tr><td>Arjun (first-time buyer)</td><td><button type="button" class="link-button" data-demo-email="arjun@example.com" id="demo-arjun" data-track="demo-arjun">arjun@example.com</button></td></tr>
+              <tr><td>Meera (wholesale)</td><td><button type="button" class="link-button" data-demo-email="meera@example.com" id="demo-meera" data-track="demo-meera">meera@example.com</button></td></tr>
+            </tbody></table></div>
+          </details>
+        </section>
+        <section class="card">
+          <h2>Sign up</h2>
+          <div id="signup-error"></div>
+          <form id="signup-form" novalidate>
+            <div class="field"><label for="signup-name">Name</label><input type="text" id="signup-name" autocomplete="name"></div>
+            <div class="field"><label for="signup-email">Email</label><input type="email" id="signup-email" autocomplete="email"></div>
+            <div class="field"><label for="signup-password">Password (6+ characters, demo only)</label><input type="password" id="signup-password" autocomplete="new-password"></div>
+            <button type="submit" class="btn btn--primary" id="signup-submit" data-track="signup-submit">Create account</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+  <!-- Footer: injected by js/partials.js -->
+  <kl-footer></kl-footer>
+  <!-- Cart drawer: injected by js/partials.js -->
+  <kl-cart-drawer></kl-cart-drawer>
+
+  <!-- Common scripts: identical block on every page -->
+  <script src="data/products.js" defer></script>
+  <script src="data/seed-users.js" defer></script>
+  <script src="data/seed-orders.js" defer></script>
+  <script src="data/seed-refunds.js" defer></script>
+  <script src="data/seed-reviews.js" defer></script>
+  <script src="js/util.js" defer></script>
+  <script src="js/db.js" defer></script>
+  <script src="js/services.js" defer></script>
+  <script src="js/datalayer.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/consent-mock.js" defer></script>
+  <script src="js/demo-panel.js" defer></script>
+  <!-- Page script -->
+  <script src="js/pages/login.js" defer></script>
+</body>
+</html>

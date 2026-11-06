@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" data-page="home">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kettle &amp; Leaf | Single-estate teas from India</title>
+  <meta name="description" content="Kettle &amp; Leaf: loose and bagged teas from India, packed fresh. A demo store for the Funnelysis GTM course.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+  <script src="js/config.js"></script>
+  <script src="js/boot.js"></script>
+  <!-- GTM head snippet: lives in js/partials.js (one place for every page). -->
+  <script src="js/partials.js"></script>
+</head>
+<body>
+  <!-- GTM body snippet (noscript iframe): inserted here by js/partials.js. -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Header: injected by js/partials.js -->
+  <kl-header></kl-header>
+  <main id="main">
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div>
+          <h1 id="hero-title">Tea with a story, from estate to cup</h1>
+          <p id="hero-subline">Four small-batch teas from India, packed fresh and shipped to your kettle.</p>
+          <div class="hero__cta">
+            <a class="btn btn--gold" id="hero-cta-shop" href="shop.html" data-track="hero-cta-shop" data-track-section="hero">Shop teas</a>
+            <a class="btn btn--ghost" id="hero-cta-find" href="tea-tasting.html" data-track="hero-cta-find" data-track-section="hero">Find your tea</a>
+          </div>
+        </div>
+        <img class="hero__img" src="img/hero.svg" alt="A copper kettle pouring tea beside a pile of tea leaves" width="520" height="460">
+      </div>
+    </section>
+
+    <section class="section" id="featured" data-track-section="featured">
+      <div class="container">
+        <div class="section__head"><h2>Our teas</h2><a href="shop.html" id="featured-all" data-track="featured-all">See all</a></div>
+        <!-- Product cards are rendered by js/pages/home.js -->
+        <div class="grid grid--4" id="featured-products"></div>
+      </div>
+    </section>
+    <hr class="gold-rule">
+
+    <section class="section section--green" id="story" data-track-section="story">
+      <div class="container">
+        <h2>From estate to cup</h2>
+        <div class="steps">
+          <div class="steps__item"><h3>Picked by hand</h3><p>Two leaves and a bud, plucked at the right hour on small family-run estates.</p></div>
+          <div class="steps__item"><h3>Packed within days</h3><p>We pack in small batches in Kolkata so the tea reaches you fresh, not forgotten.</p></div>
+          <div class="steps__item"><h3>Brewed your way</h3><p>Every tin comes with simple instructions. See our <a href="brewing-guide.html" id="story-guide-link" data-track="story-guide-link">brewing guide</a>.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Offer banner partway down the page: it only comes into view once you scroll (element visibility demo). -->
+    <section class="offer-banner" id="offer-banner" data-track-section="offer">
+      <div class="container">
+        <p><strong>10% off your first order</strong></p>
+        <p>Use code <code>CHAI10</code> at the cart, or <a href="shop.html?promo=CHAI10" id="offer-apply" data-track="offer-apply">apply it automatically</a>.</p>
+      </div>
+    </section>
+
+    <section class="section" id="latest-reviews-section" data-track-section="reviews">
+      <div class="container">
+        <div class="section__head"><h2>What tea drinkers say</h2></div>
+        <div class="grid grid--3" id="latest-reviews"></div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer: injected by js/partials.js -->
+  <kl-footer></kl-footer>
+  <!-- Cart drawer: injected by js/partials.js -->
+  <kl-cart-drawer></kl-cart-drawer>
+
+  <!-- Common scripts: identical block on every page -->
+  <script src="data/products.js" defer></script>
+  <script src="data/seed-users.js" defer></script>
+  <script src="data/seed-orders.js" defer></script>
+  <script src="data/seed-refunds.js" defer></script>
+  <script src="data/seed-reviews.js" defer></script>
+  <script src="js/util.js" defer></script>
+  <script src="js/db.js" defer></script>
+  <script src="js/services.js" defer></script>
+  <script src="js/datalayer.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/consent-mock.js" defer></script>
+  <script src="js/demo-panel.js" defer></script>
+  <!-- Page script -->
+  <script src="js/pages/home.js" defer></script>
+</body>
+</html>

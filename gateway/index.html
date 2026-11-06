@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KettlePay | Secure checkout (demo)</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="gateway.css">
+</head>
+<body>
+  <!-- GTM is loaded by gateway.js from the ?gtm= query parameter, so the student's container runs on this second domain too. -->
+  <header class="gw-header"><span class="gw-logo">KettlePay</span><span class="gw-secure">Demo payment gateway</span></header>
+  <main class="gw-card" id="gateway-main">
+    <div class="gw-demo" id="gateway-demo-notice">DEMO ONLY: do not enter real card details.</div>
+    <div id="gateway-error" hidden></div>
+    <div id="gateway-content">
+      <h1>Pay for your order</h1>
+      <dl class="gw-summary">
+        <dt>Merchant</dt><dd>Kettle &amp; Leaf (demo)</dd>
+        <dt>Order</dt><dd id="gw-order" class="mono">–</dd>
+        <dt>Amount</dt><dd id="gw-amount" class="gw-amount">–</dd>
+      </dl>
+      <label for="gw-card">Card number</label>
+      <input type="text" id="gw-card" value="4242 4242 4242 4242" readonly>
+      <div class="gw-row">
+        <div><label for="gw-exp">Expiry</label><input type="text" id="gw-exp" value="12 / 30" readonly></div>
+        <div><label for="gw-cvc">CVC</label><input type="text" id="gw-cvc" value="123" readonly></div>
+      </div>
+      <button type="button" class="gw-btn gw-btn--ok" id="gateway-success" data-track="gateway-success">Simulate success</button>
+      <button type="button" class="gw-btn gw-btn--bad" id="gateway-decline" data-track="gateway-decline">Simulate decline</button>
+    </div>
+  </main>
+  <script src="gateway.js"></script>
+</body>
+</html>

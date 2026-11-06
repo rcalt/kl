@@ -1,0 +1,12 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; color: #1c1c1a; background: #fff; }
+.bw { padding: 1.25rem; max-width: 520px; }
+h1 { font-size: 1.4rem; margin: 0 0 .3rem; color: #163323; }
+.bw__sub { color: #5b6358; margin: 0 0 1rem; font-size: .92rem; }
+label { display: block; font-weight: 600; font-size: .88rem; margin: .8rem 0 .25rem; }
+input, select { width: 100%; padding: .6rem .7rem; border: 1.5px solid #c9c2ab; border-radius: 6px; font: inherit; }
+button { margin-top: 1.1rem; background: #24503A; color: #fff; border: 0; border-radius: 6px; padding: .7rem 1.4rem; font: 600 1rem system-ui, sans-serif; cursor: pointer; }
+button:hover { background: #163323; }
+.bw__done { background: #d7ebdc; color: #14452a; padding: .9rem; border-radius: 6px; }
+.bw__err { background: #f6e1dc; color: #a23b2a; padding: .6rem .8rem; border-radius: 6px; }
+:focus-visible { outline: 3px solid #C49A2C; outline-offset: 2px; }

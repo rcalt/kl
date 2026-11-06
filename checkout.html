@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" data-page="checkout">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout | Kettle &amp; Leaf</title>
+  <meta name="description" content="Secure demo checkout.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/pages/checkout.css">
+  <script src="js/config.js"></script>
+  <script src="js/boot.js"></script>
+  <!-- GTM head snippet: lives in js/partials.js (one place for every page). -->
+  <script src="js/partials.js"></script>
+</head>
+<body>
+  <!-- GTM body snippet (noscript iframe): inserted here by js/partials.js. -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Header: injected by js/partials.js -->
+  <kl-header></kl-header>
+  <main id="main">
+    <div class="container">
+      <div class="page-title"><h1>Checkout</h1></div>
+      <div class="checkout" id="checkout-root">
+        <div>
+          <ol class="checkout__steps" id="checkout-steps">
+            <li data-for="contact">1. Contact</li><li data-for="shipping">2. Shipping</li><li data-for="payment">3. Payment</li>
+          </ol>
+
+          <!-- Step 1. The Continue button is type="button" with a JS handler (preventDefault): this is the "form that won't fire". -->
+          <form class="checkout__panel" data-step="contact" id="checkout-step-contact" novalidate>
+            <h2>Contact</h2>
+            <div id="contact-error"></div>
+            <div class="field"><label for="checkout-email">Email</label><input type="email" id="checkout-email" name="email" autocomplete="email"></div>
+            <div class="field"><label for="checkout-phone">Phone</label><input type="tel" id="checkout-phone" name="phone" autocomplete="tel"></div>
+            <div class="field" id="checkout-account-row"><label class="check"><input type="checkbox" id="checkout-create-account"> Create an account</label></div>
+            <div class="field" id="checkout-password-field" hidden><label for="checkout-password">Password (demo only, never a real one)</label><input type="password" id="checkout-password" autocomplete="new-password"></div>
+            <div class="checkout__actions"><button type="button" class="btn btn--primary" id="checkout-continue-contact" data-track="checkout-continue-contact">Continue to shipping</button></div>
+          </form>
+
+          <form class="checkout__panel" data-step="shipping" id="checkout-step-shipping" novalidate hidden>
+            <h2>Shipping</h2>
+            <div id="shipping-error"></div>
+            <div class="field"><label for="ship-name">Full name</label><input type="text" id="ship-name" autocomplete="name"></div>
+            <div class="field"><label for="ship-line1">Address</label><input type="text" id="ship-line1" autocomplete="address-line1"></div>
+            <div class="field-row">
+              <div class="field"><label for="ship-city">City</label><input type="text" id="ship-city" autocomplete="address-level2"></div>
+              <div class="field"><label for="ship-region">State / region</label><input type="text" id="ship-region" autocomplete="address-level1"></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="ship-postal">Postal code</label><input type="text" id="ship-postal" autocomplete="postal-code"></div>
+              <div class="field"><label for="ship-country">Country</label>
+                <select id="ship-country" autocomplete="country"><option value="US">United States</option><option value="CA">Canada</option><option value="GB">United Kingdom</option><option value="AU">Australia</option><option value="IN">India</option><option value="DE">Germany</option></select></div>
+            </div>
+            <label class="option-card"><input type="radio" name="ship-method" value="standard" checked><span><strong>Standard</strong>3 to 6 days. $5.99, free on orders of $40 or more.</span></label>
+            <label class="option-card"><input type="radio" name="ship-method" value="express"><span><strong>Express</strong>1 to 2 days. $12.00.</span></label>
+            <div class="checkout__actions">
+              <button type="button" class="btn btn--ghost" id="checkout-back-contact" data-track="checkout-back-contact">Back</button>
+              <button type="button" class="btn btn--primary" id="checkout-continue-shipping" data-track="checkout-continue-shipping">Continue to payment</button>
+            </div>
+          </form>
+
+          <form class="checkout__panel" data-step="payment" id="checkout-step-payment" novalidate hidden>
+            <h2>Payment method</h2>
+            <div id="payment-banner"></div>
+            <div id="payment-error"></div>
+            <label class="option-card"><input type="radio" name="pay-method" value="kettlepay" checked><span><strong>Pay with KettlePay (card)</strong>You will be sent to the demo gateway to complete payment.</span></label>
+            <label class="option-card"><input type="radio" name="pay-method" value="cod"><span><strong>Cash on delivery</strong>Pay when your order arrives.</span></label>
+            <div class="checkout__actions">
+              <button type="button" class="btn btn--ghost" id="checkout-back-shipping" data-track="checkout-back-shipping">Back</button>
+              <button type="button" class="btn btn--primary" id="checkout-place-order" data-track="checkout-place-order">Place order</button>
+            </div>
+          </form>
+        </div>
+        <aside class="summary" id="checkout-summary"></aside>
+      </div>
+    </div>
+  </main>
+  <!-- Footer: injected by js/partials.js -->
+  <kl-footer></kl-footer>
+  <!-- Cart drawer: injected by js/partials.js -->
+  <kl-cart-drawer></kl-cart-drawer>
+
+  <!-- Common scripts: identical block on every page -->
+  <script src="data/products.js" defer></script>
+  <script src="data/seed-users.js" defer></script>
+  <script src="data/seed-orders.js" defer></script>
+  <script src="data/seed-refunds.js" defer></script>
+  <script src="data/seed-reviews.js" defer></script>
+  <script src="js/util.js" defer></script>
+  <script src="js/db.js" defer></script>
+  <script src="js/services.js" defer></script>
+  <script src="js/datalayer.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/consent-mock.js" defer></script>
+  <script src="js/demo-panel.js" defer></script>
+  <!-- Page script -->
+  <script src="js/pages/checkout.js" defer></script>
+</body>
+</html>

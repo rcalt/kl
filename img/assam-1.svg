@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640" role="img"><title>Assam tea tin</title><rect width="640" height="640" fill="#F8F4EA"/>
+<ellipse cx="320" cy="560" rx="170" ry="22" fill="#163323" opacity=".12"/>
+<rect x="190" y="140" width="260" height="410" rx="22" fill="#7a3b22"/>
+<rect x="190" y="140" width="260" height="46" rx="22" fill="#163323"/>
+<rect x="210" y="230" width="220" height="230" rx="10" fill="#F8F4EA"/>
+<rect x="220" y="240" width="200" height="210" rx="6" fill="none" stroke="#C49A2C" stroke-width="2"/>
+<path d="M320 262 c-28 18 -28 48 0 62 c28 -14 28 -44 0 -62z" fill="#4a2a1a"/>
+<text x="320" y="368" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#163323">Assam</text>
+<text x="320" y="402" text-anchor="middle" font-family="Georgia,serif" font-size="20" fill="#5B6358">Breakfast</text>
+<text x="320" y="436" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" letter-spacing="2" fill="#C49A2C">KETTLE &amp; LEAF</text></svg>

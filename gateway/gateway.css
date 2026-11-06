@@ -1,0 +1,21 @@
+/* KettlePay: deliberately looks like a different site (neutral grey and blue). */
+* { box-sizing: border-box; }
+body { margin: 0; background: #eef0f4; color: #1f2937; font-family: system-ui, -apple-system, 'Segoe UI', Arial, sans-serif; }
+.mono { font-family: ui-monospace, Consolas, monospace; }
+.gw-header { background: #1e3a8a; color: #fff; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+.gw-logo { font-weight: 800; font-size: 1.4rem; letter-spacing: -.02em; }
+.gw-secure { font-size: .85rem; opacity: .85; }
+.gw-card { max-width: 440px; margin: 2rem auto; background: #fff; border-radius: 12px; box-shadow: 0 4px 24px rgba(30, 58, 138, .12); padding: 1.5rem; }
+.gw-demo { background: #fde68a; border: 2px solid #b45309; color: #78350f; font-weight: 800; text-align: center; padding: .9rem; border-radius: 8px; font-size: 1.1rem; margin-bottom: 1.2rem; }
+h1 { font-size: 1.3rem; margin: 0 0 1rem; }
+.gw-summary { display: grid; grid-template-columns: auto 1fr; gap: .3rem 1rem; margin: 0 0 1.2rem; }
+.gw-summary dt { color: #6b7280; } .gw-summary dd { margin: 0; text-align: right; }
+.gw-amount { font-size: 1.4rem; font-weight: 800; }
+label { display: block; font-size: .85rem; color: #4b5563; margin: .8rem 0 .25rem; }
+input { width: 100%; padding: .7rem; border: 1px solid #cbd2dc; border-radius: 6px; font: inherit; background: #f3f4f6; }
+.gw-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.gw-btn { display: block; width: 100%; margin-top: 1rem; padding: .85rem; border: 0; border-radius: 8px; font: 700 1rem system-ui, sans-serif; color: #fff; cursor: pointer; }
+.gw-btn--ok { background: #2563eb; } .gw-btn--ok:hover { background: #1d4ed8; }
+.gw-btn--bad { background: #6b7280; margin-top: .6rem; } .gw-btn--bad:hover { background: #4b5563; }
+.gw-error { background: #fee2e2; color: #991b1b; padding: .9rem; border-radius: 8px; }
+:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }

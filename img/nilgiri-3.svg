@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640" role="img"><title>Nilgiri a cup of tea</title><rect width="640" height="640" fill="#F8F4EA"/>
+<ellipse cx="320" cy="500" rx="210" ry="34" fill="#163323" opacity=".12"/>
+<ellipse cx="320" cy="470" rx="200" ry="38" fill="#ffffff" stroke="#e3dcc8"/>
+<path d="M200 300 h240 c0 110 -40 170 -120 170 s-120 -60 -120 -170z" fill="#ffffff" stroke="#e3dcc8" stroke-width="2"/>
+<ellipse cx="320" cy="300" rx="120" ry="24" fill="#c9d77a"/>
+<path d="M440 330 c60 -10 70 70 -10 90" fill="none" stroke="#e3dcc8" stroke-width="14" stroke-linecap="round"/>
+<path d="M290 250 c-20 -30 20 -50 0 -80 M335 250 c-20 -30 20 -50 0 -80" fill="none" stroke="#C49A2C" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+<path d="M320 405 c-16 10 -16 26 0 34 c16 -8 16 -24 0 -34z" fill="#8fbf6a" opacity=".8"/></svg>

@@ -1,0 +1,7 @@
+.admin-banner { background: #1C1C1A; color: #fff; text-align: center; padding: .7rem 1rem; font-weight: 600; }
+.admin-tabs { display: flex; gap: .4rem; margin: 1.5rem 0 1rem; }
+.admin-panel[hidden] { display: none; }
+.payload { font-family: var(--font-mono); font-size: .8rem; background: #1C1C1A; color: #e6eadf; padding: .8rem; border-radius: 6px; white-space: pre-wrap; word-break: break-word; margin: .5rem 0; }
+.webhook-row { background: var(--white); border: 1px solid var(--line); border-radius: 8px; padding: .7rem 1rem; margin-bottom: .6rem; }
+.webhook-row summary { cursor: pointer; display: flex; gap: .8rem; flex-wrap: wrap; align-items: center; }
+.webhook-row__actions { display: flex; gap: .5rem; flex-wrap: wrap; }
